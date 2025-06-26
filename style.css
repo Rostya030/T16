@@ -1,14 +1,52 @@
-* {
-    box-sizing: border-box;
+.bg-box {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
 }
 
-.bg-box {
-    width: 88%;
-    height: 600px;
-    background-color: #090;
-    background-image: url(./image.kryakva/xata.webp), url(./image.kryakva/lamp.png), url(./image.kryakva/ezik.webp), url(./image.kryakva/ponchik-removebg-preview.png), url(./image.kryakva/green-png-44873.png);
-    background-repeat: no-repeat, repeat-x, repeat-y, repeat-y, repeat-x;
-    background-position: center, top, left, right, bottom;
-    background-size: auto, 33px, 35px, 35px, 105px;
+.gradient {
+    height: 3000px;
+    width: 1000%;
+    background: linear-gradient(149deg, #7de3ff 0%, #002053 100%);
+    animation: gradient 10s infinite linear;
+    background-size: 4000%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 
+@keyframes gradient {
+    0% {
+        background-position: 80% 0%;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0%;
+    }
+}
+
+.hello-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    opacity: 0.9;
+    z-index: 2;
+    margin: 0;
+    pointer-events: none;
+}
+
+.gradient-text {
+    background: linear-gradient(149deg, rgb(37, 241, 204) 0%, rgb(85, 46, 139) 42%, rgba(187,24,148,1) 72%, rgba(115,53,134,1) 100%);
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 10s infinite linear;
 }
